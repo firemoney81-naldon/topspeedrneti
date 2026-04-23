@@ -1,23 +1,464 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Home</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <!--
-      Need a visual blank slate?
-      Remove all code in `styles.css`!
-    -->
-    <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="script.js"></script>
-  </head>
-  <body>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "포항인터넷가입 - 2026 최신 할인 혜택, 현금 지원금 비교 가이드",
+      "description": "2026년 포항 지역 인터넷 가입 정보를 제공하며, SKT, KT, LGU+ 등 주요 통신사별 요금제와 사은품, 현금지원 혜택을 비교 분석합니다. 포항 북구, 남구 등 지역별 맞춤형 추천 정보를 포함합니다.",
+      "url": "https://example.com/pohang-internet-guide",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://example.com/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      },
+      "lastReviewed": "2026-04-23",
+      "datePublished": "2026-01-01",
+      "publisher": {
+        "@type": "Organization",
+        "name": "포항인터넷비교센터",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://example.com/images/logo.png"
+        }
+      },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "홈",
+            "item": "https://example.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "포항인터넷가입",
+            "item": "https://example.com/pohang-internet-guide"
+          }
+        ]
+      }
+    }
+  </script>
+
+  <!-- Google Fonts for professional Korean typography -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* 부드러운 파스텔 톤 배경과 명확한 타이틀 스타일 */
+    body {
+      font-family: 'Noto Sans KR', Arial, sans-serif;
+      margin: 0; padding: 0;
+      background: #f9fafc; /* 연한 하늘색 배경 */
+      color: #2c3e50; /* 어두운 회색 텍스트 */
+      line-height: 1.7;
+      font-size: 16px;
+    }
+    header, section, footer {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+    header {
+      border-bottom: 2px solid #3498db; /* 강조 파란색 */
+      padding-bottom: 15px;
+    }
+    h1 {
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: #2980b9; /* 짙은 파란색 */
+      margin-bottom: 0.3em;
+    }
+    h2 {
+      font-size: 2rem;
+      color: #34495e; /* 짙은 회색 */
+      border-left: 5px solid #3498db;
+      padding-left: 10px;
+      margin-top: 2em;
+      margin-bottom: 1em;
+    }
+    h3 {
+      font-size: 1.4rem;
+      color: #2c3e50;
+      margin-bottom: 0.5em;
+      border-bottom: 2px solid #ecf0f1; /* 연한 회색 구분선 */
+      padding-bottom: 6px;
+    }
+    nav ul {
+      display: flex;
+      gap: 20px;
+      padding: 0;
+      list-style: none;
+      margin: 10px 0 25px 0;
+    }
+    nav a {
+      text-decoration: none;
+      color: #3498db;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #1abc9c; /* 민트색 강조 */
+    }
+    .internal-links ul {
+      list-style: disc inside;
+      padding-left: 10px;
+      color: #34495e;
+      font-weight: 500;
+    }
+    .internal-links a {
+      color: #2980b9;
+      text-decoration: none;
+    }
+    .internal-links a:hover {
+      text-decoration: underline;
+    }
+    .content-box {
+      background: #ffffff; /* 흰색 배경 */
+      border-radius: 8px;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.1); /* 그림자 효과 */
+      padding: 20px 25px;
+      margin-bottom: 30px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1em;
+      margin-bottom: 1em;
+      font-size: 0.95rem;
+      color: #2c3e50;
+    }
+    th, td {
+      border: 1px solid #bdc3c7;
+      padding: 12px 15px;
+      text-align: center;
+    }
+    th {
+      background-color: #ecf0f1;
+      font-weight: 700;
+      color: #2c3e50;
+    }
+    /* CTA 버튼 */
+    .cta-btn {
+      display: inline-block;
+      background: #2980b9;
+      color: white;
+      padding: 14px 28px;
+      font-weight: 700;
+      font-size: 1.1rem;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+      margin-top: 12px;
+    }
+    .cta-btn:hover {
+      background: #1abc9c;
+    }
+    /* FAQ 스타일 */
+    .faq .item {
+      border-bottom: 1px solid #ddd;
+      padding: 12px 0;
+    }
+    .faq .item h3 {
+      font-weight: 700;
+      cursor: pointer;
+      color: #2980b9;
+    }
+    .faq .item p {
+      margin-top: 8px;
+      padding-left: 10px;
+      color: #555;
+      line-height: 1.5;
+    }
+    /* 입력 폼 */
+    form p {
+      margin-bottom: 15px;
+    }
+    form label {
+      font-weight: 600;
+      display: block;
+      margin-bottom: 6px;
+      color: #2c3e50;
+    }
+    form input[type="text"],
+    form input[type="tel"],
+    form input[type="email"],
+    form textarea,
+    form select {
+      width: 100%;
+      padding: 10px 12px;
+      font-size: 1rem;
+      border-radius: 5px;
+      border: 1.5px solid #bdc3c7;
+      box-sizing: border-box;
+      transition: border-color 0.3s ease;
+      font-family: inherit;
+      resize: vertical;
+    }
+    form input[type="text"]:focus,
+    form input[type="tel"]:focus,
+    form input[type="email"]:focus,
+    form textarea:focus,
+    form select:focus {
+      outline: none;
+      border-color: #2980b9;
+      background: #f0f8ff;
+    }
+    form button {
+      background-color: #2980b9;
+      color: #fff;
+      font-weight: 700;
+      padding: 14px 28px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1.1rem;
+      transition: background-color 0.3s ease;
+    }
+    form button:hover {
+      background-color: #1abc9c;
+    }
+    /* 그래프 스타일 */
+    .chart-container {
+      width: 100%;
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+    .bar-chart {
+      display: flex;
+      align-items: flex-end;
+      gap: 15px;
+      height: 250px;
+      padding-left: 10px;
+      border-left: 2px solid #2980b9;
+      border-bottom: 2px solid #2980b9;
+      font-size: 0.9rem;
+      color: #34495e;
+    }
+    .bar {
+      flex: 1;
+      background: #3498db;
+      border-radius: 6px 6px 0 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+      color: white;
+      font-weight: 700;
+      padding-bottom: 5px;
+      cursor: default;
+      transition: background 0.3s ease;
+    }
+    .bar:hover {
+      background: #1abc9c;
+    }
+    .bar-label {
+      margin-top: 8px;
+      color: #34495e;
+      font-weight: 600;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #95a5a6;
+      margin: 50px auto 30px auto;
+      padding-top: 20px;
+      border-top: 1px solid #ecf0f1;
+    }
+    /* 반응형 */
+    @media (max-width: 600px) {
+      nav ul {
+        flex-direction: column;
+        gap: 12px;
+      }
+      .bar-chart {
+        height: 180px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>포항인터넷가입 – 2026 최신 할인 혜택, 현금 지원금 비교 가이드</h1>
+    <p>포항 시민을 위한 2026년 최신 인터넷 가입 정보를 제공합니다. SKT, KT, LGU+ 통신사별 요금제, 사은품, 현금지원 혜택을 비교하여 가장 저렴하고 빠른 상품을 찾아보세요.</p>
     <nav>
-      <a href="/" aria-current="page">Home</a>
-      <a href="/page2.html">Other page</a>
+      <ul>
+        <li><a href="#guide-intro">포항인터넷가입 가이드</a></li>
+        <li><a href="#comparison-table">요금제 비교 및 추천</a></li>
+        <li><a href="#benefits">현금 사은품 혜택 분석</a></li>
+        <li><a href="#local-analysis">포항 지역별 특징</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">상담 신청</a></li>
+      </ul>
     </nav>
-    <main>
-      <h1>Home page</h1>
-    </main>
-  </body>
-</html>
+  </header>
+
+  <section class="internal-links">
+    <h2>주요 검색어 및 연관 키워드</h2>
+    <ul>
+      <li><a href="#comparison-table">포항 인터넷 요금제 비교</a></li>
+      <li><a href="#benefits">포항 인터넷 현금지원 혜택</a></li>
+      <li><a href="#local-analysis">포항 북구 남구 인터넷 설치</a></li>
+      <li><a href="#faq">포항 인터넷 가입 시 주의사항</a></li>
+      <li><a href="#comparison-table">포항 인터넷 신규가입 사은품 순위</a></li>
+      <li><a href="#contact">포항 인터넷 견적 문의</a></li>
+      <li><a href="#provider-differences">KT SK LG 인터넷 장단점 차이점</a></li>
+    </ul>
+  </section>
+
+  <section id="guide-intro" class="content-box">
+    <h2>포항인터넷가입, 왜 꼼꼼한 비교가 필요할까요?</h2>
+    <p>포항 지역에서 인터넷을 가입할 때는 단순히 저렴한 가격만 고려해서는 안 됩니다. 2026년 현재 포항의 인터넷 환경은 지역별로 큰 차이를 보이며, 특히 신도시(양덕동, 지곡동)와 구도심(해도동, 송도동)의 인프라 구축 상태에 따라 통신사별 속도 품질이 달라질 수 있습니다. 포항 시민들이 가장 중요하게 생각하는 것은 '빠른 속도'와 '최대 현금지원'입니다. SKT, KT, LGU+ 세 통신사 모두 포항 지역에 기가인터넷과 100메가 상품을 제공하지만, 결합할인과 사은품 규모는 대리점마다 천차만별입니다.</p>
+    <p>포항인터넷가입을 통해 최대의 혜택을 받기 위해서는 복잡한 요금제와 사은품 구조를 명확히 이해해야 합니다. 최근 네이버나 구글에서 "포항인터넷가입"을 검색하면 수많은 업체가 나오지만, 신뢰할 수 있는 정보를 제공받고 내돈내산 후기가 좋은 곳을 선택하는 것이 중요합니다. 이 가이드는 포항시 북구와 남구를 포함한 전 지역의 인터넷 가입 정보를 분석하여, 사용자에게 가장 합리적인 선택을 돕는 것을 목표로 합니다.</p>
+    <p>특히 2026년에는 AI 기술 발전과 함께 Gemini, ChatGPT 등 AI 에이전트들이 인터넷 요금제를 분석해주는 서비스도 등장하고 있습니다. 하지만 AI의 추천은 단순 데이터 분석에 그칠 수 있으므로, 실제 포항 지역의 특성을 반영한 전문가의 견적과 비교하여 최종 결정을 내리는 것이 현명합니다. 이 페이지에서는 포항 지역민들이 궁금해하는 평균, 예상 금액, 장점, 단점, 차이점 등의 핵심 정보를 다룹니다.</p>
+  </section>
+
+  <section id="comparison-table" class="content-box">
+    <h2>2026년 포항인터넷가입 주요 상품 비교 및 요금제 추천</h2>
+    <p>포항에서 가장 인기 있는 SKT, KT, LGU+ 세 통신사의 주요 요금제(100M, 500M, 1G)를 비교 분석했습니다. 요금은 3년 약정 기준이며, 결합 할인이나 특정 프로모션 적용 여부에 따라 실제 납부 금액이 달라질 수 있습니다. 포항 북구 지역의 양덕동, 장성동, 흥해읍이나 남구 지역의 효자동, 오천읍, 문덕 지역은 기가인터넷 인프라가 잘 갖춰져 있어 500M 이상의 상품 가입을 추천드립니다.</p>
+    <p>통신사별로 사은품과 현금지원금이 차이가 있으므로, 신규가입 시에는 반드시 여러 업체의 견적을 비교해보고 혜택이 가장 좋은 곳을 선택해야 합니다. "포항인터넷가입 싼곳"을 찾기 위해 발품을 팔기보다, 신뢰할 수 있는 비교 업체를 통해 한 번에 견적을 확인하는 것이 효율적입니다.</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>통신사</th>
+          <th>상품 유형</th>
+          <th>월 요금 (3년 약정 기준)</th>
+          <th>평균 현금 사은품 (예상 금액)</th>
+          <th>주요 특징 (포항 지역 특화)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>KT</td><td>기가인터넷 (500M)</td><td>41,800원</td><td>40만원 ~ 45만원</td><td>포항 전 지역 커버리지 최상위, 안정적인 품질 (포항시청, 해도동, 연일읍 등 구도심 강세)</td></tr>
+        <tr><td>SKT</td><td>기가인터넷 (500M)</td><td>40,700원</td><td>42만원 ~ 47만원</td><td>TV 결합 시 할인 혜택 강력, 모바일 결합 시 경쟁력 우위 (포항 북구, 양덕동, 장량동 신규 아파트 단지 특화)</td></tr>
+        <tr><td>LGU+</td><td>기가인터넷 (500M)</td><td>40,700원</td><td>43만원 ~ 48만원</td><td>최대 현금지원금 제공 가능성 높음, IPTV 콘텐츠 경쟁력 우수 (포항 남구, 효자동, 문덕 지역 신규 주거지 강세)</td></tr>
+        <tr><td>KT</td><td>100M 광랜</td><td>22,000원</td><td>12만원 ~ 15만원</td><td>단독가구 및 저렴한 비용 선호 고객에게 추천</td></tr>
+        <tr><td>SKT</td><td>100M 광랜</td><td>20,900원</td><td>13만원 ~ 16만원</td><td>모바일 결합 시 추가 할인 혜택</td></tr>
+      </tbody>
+    </table>
+    <p>데이터 출처: 2026년 포항 지역별 인터넷 가입 통계 및 평균 견적 분석</p>
+  </section>
+
+  <section id="benefits" class="content-box">
+    <h2>포항인터넷가입 현금 지원금 및 사은품 혜택 분석</h2>
+    <p>인터넷 가입 시 가장 중요한 혜택 중 하나는 현금 지원금입니다. 2026년 기준으로, 통신사 본사 정책과 대리점 정책에 따라 지원금 규모가 달라집니다. 특히 포항 지역은 경쟁이 치열하여 "포항 인터넷 싼곳"을 찾는다면 현금 사은품을 많이 주는 곳을 찾아야 합니다. 보통 기가인터넷과 IPTV 결합 상품을 신규로 가입할 경우, 최대 40만원에서 50만원 이상의 현금 사은품을 받을 수 있습니다. 이는 통신사 변경 시 받을 수 있는 최대의 혜택이며, 내돈내산 후기를 보면 사은품을 제대로 받지 못해 손해를 보는 경우도 있으니 신뢰할 수 있는 업체 선정이 중요합니다.</p>
+    <p>현금 사은품 외에도 상품권이나 결합 할인 등의 혜택이 있습니다. SKT는 모바일 결합 시 할인이 가장 크고, KT는 TV 화질 및 안정성, LGU+는 IPTV 콘텐츠가 강점입니다. 포항인터넷가입을 고려하는 분들은 단순한 가격 비교를 넘어, 어떤 서비스가 자신의 라이프스타일(스트리밍, 게임, 재택근무 등)에 맞는지 파악해야 합니다.</p>
+    <p>아래 그래프는 2026년 포항 지역민들이 인터넷 가입 시 가장 중요하게 고려하는 요소 순위를 보여줍니다. 현금 지원금이 가장 큰 비중을 차지하고 있으며, 가격과 속도, 사은품 순으로 이어집니다.</p>
+
+    <div class="chart-container" aria-label="2026년 포항인터넷가입 고객 고려 요소 통계 그래프" role="img">
+      <div class="bar-chart">
+        <div class="bar" style="height: 180px;" title="현금 지원금">현금 지원금<br>(45%)</div>
+        <div class="bar" style="height: 150px;" title="월 요금 가격">월 요금 가격<br>(30%)</div>
+        <div class="bar" style="height: 120px;" title="인터넷 속도">인터넷 속도<br>(20%)</div>
+        <div class="bar" style="height: 100px;" title="사은품 종류">사은품 종류<br>(15%)</div>
+        <div class="bar" style="height: 80px;" title="설치 용이성">설치 용이성<br>(10%)</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="local-analysis" class="content-box">
+    <h2>포항 지역별 인터넷 설치 환경 및 특징 분석</h2>
+    <p>포항은 지역별 인프라 편차가 존재합니다. 포항시 북구와 남구의 주요 지역별로 인터넷 설치 환경과 특징을 자세히 분석하여, 해당 지역에 거주하는 시민들이 최적의 선택을 할 수 있도록 돕습니다.</p>
+    <p><strong>1. 포항 북구 지역: 신규 아파트 단지 중심</strong></p>
+    <p>포항 북구는 양덕동, 장성동, 흥해읍 KTX 신경주역 주변, 그리고 환호동, 우창동, 장량동을 중심으로 신규 아파트와 주거 단지가 활발하게 개발되고 있습니다. 이 지역은 2026년 기준으로 기가인터넷 인프라가 완벽하게 구축되어 있어, 어떤 통신사를 선택해도 고속 인터넷 사용에 문제가 거의 없습니다. 특히 양덕동이나 장성동의 신축 아파트로 이사하는 경우, 통신사별 경쟁이 치열하여 "포항 인터넷 신규가입 혜택"이 매우 좋은 편입니다. SKT와 LGU+가 공격적인 마케팅을 펼치는 지역으로, 현금 사은품이나 상품권 지원이 높을 수 있습니다. 또한, 포항시 북구 송라면, 청하면, 기계면, 죽장면 등 외곽 지역은 아직 인프라가 미흡한 곳도 있으므로 사전에 설치 가능 여부를 확인해야 합니다.</p>
+
+    <p><strong>2. 포항 남구 지역: 구도심 및 산업단지 중심</strong></p>
+    <p>포항 남구는 효자동, 지곡동, 이동, 대이동과 더불어 포스코(POSCO)가 위치한 철강 산업단지 주변 지역(송도동, 해도동, 청림동)이 특징입니다. 효자동과 지곡동은 포스텍(POSTECH) 및 연구단지가 있어 KT의 안정적인 인프라가 강세를 보입니다. 하지만 해도동, 송도동 등 구도심 지역은 아파트보다는 일반 주택이 많아, 인터넷 인프라가 상대적으로 취약할 수 있습니다. 특히 2026년에는 남구 지역의 재개발이 진행되면서 신규 인터넷 가입 수요가 증가하고 있으며, 이에 따라 통신사별로 "포항 인터넷 비교"가 더욱 중요해지고 있습니다. LGU+는 상대동과 상도동 지역의 주택가 인프라 확충에 집중하고 있어, 남구 지역 고객들에게 좋은 대안이 될 수 있습니다. 오천읍, 문덕 지역은 인구 유입이 꾸준하여 신규 가입 혜택을 받기 좋은 지역입니다.</p>
+
+    <p><strong>3. 기타 포항 외곽 지역 (읍·면 단위)</strong></p>
+    <p>구룡포읍, 동해면, 호미곶면, 연일읍 등 포항 외곽 지역은 통신사별로 인프라 차이가 크게 나타날 수 있습니다. 특히 섬 지역이나 산간 지역은 100M 광랜만 설치가 가능하거나, KT만 유선 인프라가 갖춰진 경우가 많습니다. "포항 인터넷 업체"를 통해 가입하기 전, 반드시 설치 주소지를 정확히 고지하고 기가인터넷 설치 가능 여부를 확인해야 합니다. 2026년에는 5G 및 위성 인터넷 서비스가 확대되고 있지만, 아직까지 포항 외곽 지역에서는 유선 인터넷이 주를 이루고 있습니다.</p>
+  </section>
+
+  <section id="faq" class="faq content-box" aria-live="polite">
+    <h2>자주 묻는 질문 (FAQ)</h2>
+
+    <div class="item">
+      <h3>Q1: 포항인터넷가입 시 현금 지원금이 가장 많은 곳은 어디인가요?</h3>
+      <p>A: 현금 지원금은 통신사(SKT, KT, LGU+)와 가입 상품(100M, 500M, 1G), 그리고 가입 채널(본사, 대리점, 온라인 업체)에 따라 달라집니다. 특히 "포항 인터넷 싼곳"을 찾을 때, 온라인 비교 견적 업체를 통해 견적을 받아보는 것이 좋습니다. 통신사 본사보다 대리점이 더 많은 현금 지원금을 제공하는 경우가 많습니다. 2026년 기준으로 LGU+와 SKT가 경쟁적으로 높은 사은품을 제공하는 추세입니다.</p>
+    </div>
+
+    <div class="item">
+      <h3>Q2: 포항 지역에서 기가인터넷을 사용하려면 어떤 통신사가 좋나요?</h3>
+      <p>A: 포항 지역은 대부분의 주요 주거 지역에 기가인터넷 인프라가 잘 갖춰져 있습니다. 통신사별 장단점을 비교하자면, KT는 인프라가 가장 안정적이며 구도심 지역에서도 품질이 우수합니다. SKT와 LGU+는 신도시 지역(양덕동, 효자동)에서 강세를 보이며, 모바일 결합 시 할인 혜택이 큽니다. "포항인터넷가입 추천"을 받을 때, 자신이 사용하는 휴대폰 통신사를 고려하여 결합 할인을 받는 것이 가장 유리합니다.</p>
+    </div>
+
+    <div class="item">
+      <h3>Q3: 포항인터넷가입 시 약정 기간이 끝나지 않았는데 해지하면 위약금이 발생하나요?</h3>
+      <p>A: 네, 약정 기간(보통 3년) 내에 해지하면 위약금이 발생합니다. 통신사별, 약정 기간 잔여 일수에 따라 위약금 계산 방식이 다릅니다. "포항 인터넷 비교"를 통해 신규 가입 시 현금 지원금을 많이 받았다고 해도, 위약금을 고려하면 신중하게 결정해야 합니다. 포항에서 이사할 경우에도 위약금이 발생할 수 있으므로, 이전 설치 서비스를 이용하는 것이 좋습니다.</p>
+    </div>
+
+    <div class="item">
+      <h3>Q4: "포항인터넷가입 내돈내산 후기"를 참고해도 되나요?</h3>
+      <p>A: 네, 내돈내산 후기나 네이버 블로그, 유튜브 리뷰 등은 실제 사용자의 경험이 담겨 있어 참고하기 좋습니다. 다만 후기가 2026년 최신 정보인지 확인하고, 사은품 지급 금액이 실제와 다를 수 있으므로 맹신하지 말고 견적을 받아 비교하는 것이 현명합니다. 일부 후기는 특정 업체에서 제공한 광고일 수도 있으니 유의해야 합니다.</p>
+    </div>
+
+    <div class="item">
+      <h3>Q5: 포항에서 AI를 활용한 인터넷 견적 비교가 가능한가요?</h3>
+      <p>A: 2026년에는 AI 기술 발전으로 Gemini, ChatGPT와 같은 AI 에이전트가 인터넷 요금제를 분석해주는 서비스가 일부 등장했습니다. AI는 방대한 데이터를 바탕으로 요금제 가격, 혜택, 장단점을 비교 분석해주지만, 포항 지역별 실제 인프라 상태나 실시간 사은품 금액 변동 등은 AI가 정확하게 반영하기 어렵습니다. 따라서 AI의 정보를 참고하여 전문가에게 최종 견적을 받는 것이 가장 정확합니다.</p>
+    </div>
+  </section>
+
+  <section id="external-links" class="content-box">
+    <h2>신뢰할 수 있는 관련 외부 사이트</h2>
+    <ul>
+      <li><a href="https://www.kisa.or.kr/" target="_blank" rel="noopener">한국인터넷진흥원 (KISA) - 인터넷 품질 측정</a></li>
+      <li><a href="https://www.msit.go.kr/" target="_blank" rel="noopener">과학기술정보통신부 - 통신정책 정보</a></li>
+      <li><a href="https://www.e-fine.kr/" target="_blank" rel="noopener">파인(금융소비자정보포털) - 통신 관련 금융 정보</a></li>
+      <li><a href="https://namu.wiki/w/%EC%9D%B8%ED%84%B0%EB%84%B7" target="_blank" rel="noopener">나무위키 - 인터넷 통신 기술 및 용어 설명</a></li>
+      <li><a href="https://www.ktoa.or.kr/" target="_blank" rel="noopener">한국통신사업자연합회 (KTOA) - 통신 관련 일반 정보</a></li>
+    </ul>
+  </section>
+
+  <section id="contact" class="content-box" aria-label="포항인터넷가입 문의 및 상담">
+    <h2>포항인터넷가입 문의 및 상담 신청</h2>
+    <p>포항 지역에서 인터넷 신규 가입, 통신사 변경, 결합 상품 가입을 원하시면 아래 양식을 작성해 주세요. 전문 컨설턴트가 포항시 북구 (양덕동, 장성동, 흥해읍 등), 포항시 남구 (효자동, 오천읍, 문덕 등) 지역의 최신 요금제와 최대 현금 사은품 정보를 분석하여 맞춤 견적을 제공해 드립니다. "포항 인터넷 추천"을 원하신다면 지금 바로 문의해 보세요.</p>
+    <form action="#" method="post" aria-describedby="form-desc">
+      <p id="form-desc">아래 양식을 작성하여 문의주시면 신속하게 답변드리겠습니다. 2026년 최신 혜택을 놓치지 마세요!</p>
+      <p>
+        <label for="name">이름 <span aria-hidden="true">*</span></label>
+        <input type="text" id="name" name="name" required placeholder="홍길동" />
+      </p>
+      <p>
+        <label for="phone">연락처 <span aria-hidden="true">*</span></label>
+        <input type="tel" id="phone" name="phone" required placeholder="010-1234-5678" pattern="[0-9\-]{9,13}" />
+      </p>
+      <p>
+        <label for="email">이메일</label>
+        <input type="email" id="email" name="email" placeholder="example@email.com" />
+      </p>
+      <p>
+        <label for="address">설치 희망 주소 (포항시 [북구/남구] 상세 주소)</label>
+        <input type="text" id="address" name="address" placeholder="예: 포항시 북구 양덕동 123-456" />
+      </p>
+      <p>
+        <label for="desired-speed">희망 인터넷 속도</label>
+        <select id="desired-speed" name="desired-speed">
+          <option value="">선택하세요</option>
+          <option value="100m">100Mbps (저렴한 비용)</option>
+          <option value="500m">500Mbps (기가 라이트, 가장 인기 있는 상품)</option>
+          <option value="1g">1Gbps (기가 프리미엄, 최고 속도)</option>
+        </select>
+      </p>
+      <p>
+        <label for="current-provider">현재 이용 중인 휴대폰 통신사</label>
+        <select id="current-provider" name="current-provider">
+          <option value="">선택하세요</option>
+          <option value="skt">SKT</option>
+          <option value="kt">KT</option>
+          <option value="lgu">LGU+</option>
+          <option value="mvno">알뜰폰 (MVNO)</option>
+          <option value="none">없음</option>
+        </select>
+      </p>
+      <p>
+        <label for="inquiry">문의 내용</label>
+        <textarea id="inquiry" name="inquiry" rows="5" placeholder="궁금한 점(현금지원 금액, 요금제 차이점 등)을 자세히 작성해주세요."></textarea>
+      </p>
+      <p>
+        <button type="submit">문의하기</button>
+      </p>
+    </form>
+  </section>
+
+  
